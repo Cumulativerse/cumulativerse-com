@@ -1,0 +1,7 @@
+@use 'mixins';
+
+.general-scroll {
+  overflow: auto;
+
+  @include mixins.scrollbar-style;
+}
