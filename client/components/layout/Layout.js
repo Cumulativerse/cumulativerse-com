@@ -9,6 +9,7 @@ export default function Layout({ children }) {
         <title>Cumulativerse</title>
         <meta name="description" content="Ethical Freedom For Internet" />
         {/* For Favicons */}
+        {/* <ToDo> Do we really need all these? Does it cause unnecessary downloads? */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
