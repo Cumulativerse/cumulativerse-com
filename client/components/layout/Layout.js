@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import commonStyles from 'styles/common.module.scss';
 import styles from './layout.module.css'
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.layout}>
+    <div className={`${styles.layout} ${commonStyles["general-scroll"]}`}>
       <Head>
         <title>Cumulativerse</title>
         <meta name="description" content="Ethical Freedom For Internet" />

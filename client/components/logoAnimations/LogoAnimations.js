@@ -10,6 +10,7 @@ export function HeapversesOneWayRotation({ width = "100px" }) {
   return (
     <ReactSVG src={logo.src} style={svgStyle} afterInjection={(_err, svg) => {
       // List of all heapverse circles in svg element
+      // <ToDo> Lazy loader
       const heapverses = svg.getElementById("Heapverses").children;
       for (let i = 0; i < heapverses.length; i++) {
         const radius = parseFloat(heapverses[i].getAttribute('r'));
