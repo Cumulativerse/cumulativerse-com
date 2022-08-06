@@ -55,24 +55,33 @@ export default function Layout({ children }) {
         {children}
       </main>
 
-      <footer className={styles.footer} >
-        <Container maxWidth={false} >
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <FooterItems><span>Definition of Cumulativerse: </span><a href="https://ipfs.io/ipfs/QmVmifbia6WpwYnnEiq6AA3KVwmHUiS6TvkeEpENAg8ex5">asd</a></FooterItems>
-            </Grid>
-            <Grid item xs={12} md={6} >
-              <FooterItems className={styles['link-separator']}>
-                <Link href="https://twitter.com/cumulativerse" target="_blank" rel="noreferrer" ><TwitterIcon /></Link>
-                <Link href="https://www.instagram.com/cumulativerse/" target="_blank" rel="noreferrer" ><InstagramIcon /></Link>
-                <Link href="https://discord.com/invite/XJKdhfmD4t" target="_blank" rel="noreferrer" ><Discord /></Link>
-                <Link href="https://medium.com/@cumulativerse" target="_blank" rel="noreferrer" ><Medium /></Link>
-                <Link href="https://opensea.io/collection/cumulativerse" target="_blank" rel="noreferrer" ><Opensea /></Link>
-              </FooterItems>
-            </Grid>
+      <Container component='footer' className={styles.footer} maxWidth={false} >
+        <Grid container spacing={2}>
+
+          <Grid item xs={12} md={4}>
+            <FooterItems><span>Definition of <Link href="/cumulativerse.txt" target="_blank" rel="noreferrer" >Cumulativerse</Link></span></FooterItems>
           </Grid>
-        </Container>
-      </footer>
+
+          <Grid item xs={12} md={4} >
+            <FooterItems sx={{
+              '& > a': {
+                marginRight: "1rem",
+              },
+            }}>
+              <Link href="https://twitter.com/cumulativerse" target="_blank" rel="noreferrer" ><TwitterIcon /></Link>
+              <Link href="https://www.instagram.com/cumulativerse/" target="_blank" rel="noreferrer" ><InstagramIcon /></Link>
+              <Link href="https://discord.com/invite/XJKdhfmD4t" target="_blank" rel="noreferrer" ><Discord /></Link>
+              <Link href="https://medium.com/@cumulativerse" target="_blank" rel="noreferrer" ><Medium /></Link>
+              <Link href="https://opensea.io/collection/cumulativerse" target="_blank" rel="noreferrer" ><Opensea /></Link>
+            </FooterItems>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <FooterItems><span>IPFS <Link href="https://ipfs.io/ipfs/QmVmifbia6WpwYnnEiq6AA3KVwmHUiS6TvkeEpENAg8ex5" target="_blank" rel="noreferrer" >link</Link> for definition </span></FooterItems>
+          </Grid>
+
+        </Grid>
+      </Container>
 
     </div>
   );

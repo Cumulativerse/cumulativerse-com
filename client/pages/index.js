@@ -1,4 +1,5 @@
 // Material
+import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
@@ -14,6 +15,13 @@ export default function Home() {
     margin: "0 1em",
     flexShrink: "0"
   };
+  const SectionContainer = styled('div')(({ theme }) => ({
+    backgroundColor: theme.palette.background.section,
+    borderRadius: '1rem',
+    padding: '1rem',
+    margin: '1rem',
+  }));
+
 
   return (
     <>
@@ -22,7 +30,6 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignSelf: "center"
       }}>
 
         <Typography variant="h3" component="h1" gutterBottom align="center">CUMULATIVERSE</Typography>
@@ -39,16 +46,18 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignSelf: "center"
+        alignSelf: "center",
       }}>
-        <div>
-        <Typography variant="h5" component="h2" gutterBottom>Coming projects:</Typography>
-        <List>
-          <ListItem sx={{ display: 'list-item' }} >1. Decentralized Discord</ListItem>
-          <ListItem sx={{ display: 'list-item' }} >2. Social Network without admin</ListItem>
-          <ListItem sx={{ display: 'list-item' }} >3. NFT Game. Genre: DCCG</ListItem>
-        </List>
-        </div>
+        <SectionContainer>
+
+          <Typography variant="h5" component="h2" gutterBottom>Coming projects:</Typography>
+          <List>
+            <ListItem >1. Decentralized Discord</ListItem>
+            <ListItem >2. Social Network without admin</ListItem>
+            <ListItem >3. NFT Game. Genre: DCCG</ListItem>
+          </List>
+
+        </SectionContainer>
       </Container>
     </>
   )

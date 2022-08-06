@@ -12,7 +12,3 @@
 .footer {
     flex: 0 0 auto;
 }
-
-.link-separator > a {
-    margin-right: 1rem;
-}
