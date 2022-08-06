@@ -10,6 +10,7 @@ import Link from '@mui/material/Link';
 // Material Icons
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
 // Simple Icons
 import { Medium } from '@icons-pack/react-simple-icons';
 import { Discord } from '@icons-pack/react-simple-icons';
@@ -73,6 +74,7 @@ export default function Layout({ children }) {
               <Link href="https://discord.com/invite/XJKdhfmD4t" target="_blank" rel="noreferrer" ><Discord /></Link>
               <Link href="https://medium.com/@cumulativerse" target="_blank" rel="noreferrer" ><Medium /></Link>
               <Link href="https://opensea.io/collection/cumulativerse" target="_blank" rel="noreferrer" ><Opensea /></Link>
+              <Link href="https://github.com/Cumulativerse" target="_blank" rel="noreferrer" ><GitHubIcon /></Link>
             </FooterItems>
           </Grid>
 
