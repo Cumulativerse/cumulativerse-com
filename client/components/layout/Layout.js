@@ -1,11 +1,32 @@
+import * as React from 'react';
 import Head from 'next/head'
-import commonStyles from 'styles/common.module.scss';
+// Styles
 import styles from './layout.module.css'
+// Material
+import { styled } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+// Material Icons
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+// Simple Icons
+import { Medium } from '@icons-pack/react-simple-icons';
+import { Discord } from '@icons-pack/react-simple-icons';
+import { Opensea } from '@icons-pack/react-simple-icons';
 
 export default function Layout({ children }) {
+  const FooterItems = styled('div')({
+    display: 'flex',
+    justifyContent: 'center',
+  });
+
   return (
-    <div className={`${styles.layout} ${commonStyles["general-scroll"]}`}>
+    <div className={styles.layout} >
       <Head>
+        {/* Used to scale properly */}
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        {/* Website name and description */}
         <title>Cumulativerse</title>
         <meta name="description" content="Ethical Freedom For Internet" />
         {/* For Favicons */}
@@ -30,13 +51,29 @@ export default function Layout({ children }) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <main>
+      <main className={styles.main} >
         {children}
       </main>
 
-      <footer>
-        test footer
+      <footer className={styles.footer} >
+        <Container maxWidth={false} >
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <FooterItems><span>Definition of Cumulativerse: </span><a href="https://ipfs.io/ipfs/QmVmifbia6WpwYnnEiq6AA3KVwmHUiS6TvkeEpENAg8ex5">asd</a></FooterItems>
+            </Grid>
+            <Grid item xs={12} md={6} >
+              <FooterItems className={styles['link-separator']}>
+                <Link href="https://twitter.com/cumulativerse" target="_blank" rel="noreferrer" ><TwitterIcon /></Link>
+                <Link href="https://www.instagram.com/cumulativerse/" target="_blank" rel="noreferrer" ><InstagramIcon /></Link>
+                <Link href="https://discord.com/invite/XJKdhfmD4t" target="_blank" rel="noreferrer" ><Discord /></Link>
+                <Link href="https://medium.com/@cumulativerse" target="_blank" rel="noreferrer" ><Medium /></Link>
+                <Link href="https://opensea.io/collection/cumulativerse" target="_blank" rel="noreferrer" ><Opensea /></Link>
+              </FooterItems>
+            </Grid>
+          </Grid>
+        </Container>
       </footer>
+
     </div>
   );
 }

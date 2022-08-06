@@ -1,4 +1,18 @@
 .layout {
-    font-family: Roboto, sans-serif;
     height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.link-separator > a {
+    margin-right: 1rem;
 }

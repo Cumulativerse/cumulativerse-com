@@ -2,11 +2,7 @@
 import { ReactSVG } from 'react-svg';
 import logo from 'assets/images/Cumulativerse.svg';
 
-export function HeapversesOneWayRotation({ width = "100px" }) {
-  const svgStyle = {
-    width: width
-  };
-
+export function HeapversesOneWayRotation({ svgStyle }) {
   return (
     <ReactSVG src={logo.src} style={svgStyle} afterInjection={(_err, svg) => {
       // List of all heapverse circles in svg element
