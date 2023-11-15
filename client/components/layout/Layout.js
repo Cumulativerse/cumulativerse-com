@@ -60,7 +60,7 @@ export default function Layout({ children }) {
         <Grid container spacing={2}>
 
           <Grid item xs={12} md={4}>
-            <FooterItems><span>Definition of <Link href="/cumulativerse.txt" target="_blank" rel="noreferrer" >Cumulativerse</Link></span></FooterItems>
+            <FooterItems><span><Link href="https://github.com/orgs/Cumulativerse/discussions" target="_blank" rel="noreferrer" >Contact Us</Link></span></FooterItems>
           </Grid>
 
           <Grid item xs={12} md={4} >
@@ -79,7 +79,7 @@ export default function Layout({ children }) {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <FooterItems><span>IPFS <Link href="https://ipfs.io/ipfs/QmVmifbia6WpwYnnEiq6AA3KVwmHUiS6TvkeEpENAg8ex5" target="_blank" rel="noreferrer" >link</Link> for definition </span></FooterItems>
+            <FooterItems><span>IPFS <Link href="https://ipfs.io/ipfs/QmVmifbia6WpwYnnEiq6AA3KVwmHUiS6TvkeEpENAg8ex5" target="_blank" rel="noreferrer" >link</Link> for first proposal</span></FooterItems>
           </Grid>
 
         </Grid>

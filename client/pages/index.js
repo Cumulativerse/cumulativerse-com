@@ -53,8 +53,8 @@ export default function Home() {
           <Typography variant="h5" component="h2" gutterBottom>Coming projects:</Typography>
           <List>
             <ListItem >1. Decentralized Discord</ListItem>
-            <ListItem >2. Social Network without admin</ListItem>
-            <ListItem >3. NFT Game. Genre: DCCG</ListItem>
+            <ListItem >2. Social Network on substrate blockchain</ListItem>
+            <ListItem >3. Free to play game fully on blockchain with Godot</ListItem>
           </List>
 
         </SectionContainer>
