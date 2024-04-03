@@ -1,0 +1,33 @@
+{
+  "name": "cumulativerse-com",
+  "version": "0.1.0",
+  "description": "Cumulativerse Website",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --workspace=core",
+    "build": "npm run build --workspace=core",
+    "utility:icon-generator": "npm run icon-generator --workspace=utility-scripts",
+    "lint": "npm run lint --workspaces --if-present",
+    "prettier": "prettier --write . --ignore-path .prettierignore --ignore-path .gitignore --ignore-path core/.gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cumulativerse/cumulativerse-com.git"
+  },
+  "keywords": [
+    "cumulativerse"
+  ],
+  "author": "Furkan Alan",
+  "bugs": {
+    "url": "https://github.com/Cumulativerse/cumulativerse-com/issues"
+  },
+  "homepage": "https://github.com/Cumulativerse/cumulativerse-com#readme",
+  "workspaces": [
+    "core",
+    "utility-scripts"
+  ],
+  "devDependencies": {
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  }
+}
