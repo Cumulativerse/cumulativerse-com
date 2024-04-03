@@ -9,7 +9,6 @@ const rootDir = path.join(__dirname, '../../..');
 
 const coreAssetDir = path.join(rootDir, 'core/src/assets/images');
 const coreAppDir = path.join(rootDir, 'core/src/app');
-const coreIconSizes = [32, 192, 384];
 const faviconSize = 32;
 
 async function IconGenerator() {
@@ -24,16 +23,11 @@ async function IconGenerator() {
   const sourceIconData = await readFile(sourceIconDir + '/icon.png');
   let generatedJobs: Promise<void>[] = [];
   // Generate icons
-  for (const size of coreIconSizes) {
-    generatedJobs.push(
-      resizeImageToFile(
-        sourceIconData,
-        `${coreAppDir}/icon${size}.png`,
-        size,
-        size,
-      ),
-    );
-  }
+  generatedJobs.push(
+    resizeImageToFile(sourceIconData, `${coreAppDir}/icon.png`, 32, 32),
+    resizeImageToFile(sourceIconData, `${coreAppDir}/icon2.png`, 192, 192),
+    resizeImageToFile(sourceIconData, `${coreAppDir}/icon3.png`, 384, 384),
+  );
   generatedJobs.push(
     resizeImageToFile(sourceIconData, `${coreAppDir}/apple-icon.png`, 180, 180),
   );
